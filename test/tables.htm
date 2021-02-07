@@ -3,47 +3,61 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tables</title>
+        <style>
+            table, th, td
+            {
+                border: 1px solid black;
+                text-align: center;
+                padding: 0px;
+
+            }
+            table
+            {
+                width: 100%;
+                border-spacing: 0px;
+            }
+        </style>
     </head>
     <body>
-        <table style="border: 2px solid black;" align="left" cellspacing="0" cellpadding="0" width="100%">
+        <table>
             <caption><strong>Temperature and Dew Point for SAN DIEGO INTERNATIONAL AIRPORT, CA US</strong></caption>
             <thead>
                 <tr>
-                    <th rowspan="2" style="border: 2px solid black;">
-                        <img src="noaa.png" alt="NOAA Logo" border="0" align="left" width="100">
+                    <th rowspan="2">
+                        <div style="text-align: left;"><img src="noaa.png" alt="NOAA Logo" width="100"></div>
                     </th>
-                    <th style="border: 2px solid black;">
-                        <strong style="font-size: 18pt;">LATITUDE</strong>
+                    <th>
+                        <strong>LATITUDE</strong>
                     </th>
-                    <th style="border: 2px solid black;">
-                        <strong style="font-size: 18pt;">LONGITUDE</strong>
+                    <th>
+                        <strong>LONGITUDE</strong>
                     </th>
                 </tr>
                 <tr>
-                    <th style="border: 2px solid black;">
+                    <th>
                         <strong>32.7336</strong>
                     </th>
-                    <th style="border: 2px solid black;">
+                    <th>
                         <strong>-117.1831</strong>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="border: 2px solid black;">
+                    <td>
                         <strong>DATE</strong>
                     </td>
-                    <td style="border: 2px solid black;">
+                    <td>
                         <strong>HLY-DEWP-NORMAL</strong>
                     </td>
-                    <td style="border: 2px solid black;">
+                    <td>
                         <strong>HLY-TEMP-NORMAL</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td style="border: 2px solid black;">01-01-T01:00:00</td>
-                    <td style="border: 2px solid black;">43.5</td>
-                    <td style="border: 2px solid black;">52.9</td>
+                    <td>01-01-T01:00:00</td>
+                    <td>43.5</td>
+                    <td>52.9</td>
                 </tr>
             </tbody>
         </table>
