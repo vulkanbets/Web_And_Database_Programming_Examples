@@ -10,6 +10,36 @@
     <p>Please fill out this form</p>
     <hr>
     <form name="" method="post" action="/cgi-bin/post.cgi">
+
+
+        <!-- https://www.w3schools.com/Colors/colors_hexadecimal.asp -->
+        <label for="">Color: <input type="color" name="color" autofocus></label>
+        <hr>
+
+        <label for="">Datetime-local: <input type="datetime-local" name="datetime-local" id=""></label>
+        <hr>
+
+        <hr>
+        <label for="">Range: 0<input type="range" name="range" min="0" max="100" value="50" list="tickmarks">100</label>
+        <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
+        </datalist>
+        <hr>
+
+        <label for="">Number:<input type="number" name="number" min="0" max="16" step="2" value="0" required>enter number in range [0,16]</label>
+        
+        <hr>
+
         <input type="text" name="textbox" value="default value" id="" maxlength="50">
         <input type="hidden" name="myHiddenField" value="sEcReTtOkEn">
         <hr>
