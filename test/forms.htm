@@ -14,6 +14,16 @@
         <hr>
         <textarea rows="10" cols="80" name="comments" id="">Please enter your comments here</textarea>
         <hr>
+        <label>Pick a sensor to enable:</label>
+        <select name="mySelection" id="">
+            <optgroup label="">
+                <option value="Temperature" selected="selected">Temperature</option>
+                <option value="Pressure">Pressure</option>
+                <option value="Wind Speed">Wind Speed</option>
+                <option value="Rain Fall">Rain Fall</option>
+            </optgroup>
+        </select>
+        <hr>
         <input type="submit" value="submit">
         <input type="reset" value="clear">
     </form>
