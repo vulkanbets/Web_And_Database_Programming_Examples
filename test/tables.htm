@@ -7,41 +7,30 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <style type="text/css">
     .header { background-color: cornflowerblue; }
-    .background
+    body
     {
-        position: absolute;
-        top: 6px;
-        left: 15px;
-        z-index: 1;
+        background-image: url(primary2color.gif);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom left;
     }
-    .logo
-    {
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        z-index: 2;
-    }
-    .icon
-    {
-        position: absolute;
-        top: 225px;
-        left: 310px;
-        z-index: 3;
-    }
-    .dataTable
-    {
-        position: absolute;
-        top: 720px;
-    }
+    .background { position: absolute; top: 6px; left: 15px; z-index: 1; }
+    .logo { position: absolute; top: 50px; left: 50px; z-index: 2; }
+    .icon { position: absolute; top: 225px; left: 310px; z-index: 3; }
+    .dataTable { position: absolute; top: 720px; }
+
+    span { color: red; }
+
+    .moveDown { position: relative; bottom: -1ex; }
+    .moveLeft { position: relative; left: -1ex; }
+
 </style>
 </head>
 <body>
-<table class="dataTable">
-    <img src="sdsu_librarydome_homepage_image_1440px.jpg" class="background" alt="SDSU Library"  border="0" align="left" width="1330">
-    <img src="SDSUprimary3Crgb.jpg" class="logo" alt="SDSU Logo"  border="0" align="left" width="300">
-    <img src="noaa.png" class="icon" alt="NOAA Logo" border="0" align="left" width="50">
-
-
+<!--img src="sdsu_librarydome_homepage_image_1440px.jpg" class="background" alt="SDSU Library"  border="0" align="left" width="1330">
+<img src="SDSUprimary3Crgb.jpg" class="logo" alt="SDSU Logo"  border="0" align="left" width="300">
+<img src="noaa.png" class="icon" alt="NOAA Logo" border="0" align="left" width="50"-->
+<!--table class="dataTable">
     <caption><strong>Temperature and Dew Point for SAN DIEGO INTERNATIONAL AIRPORT, CA US</strong></caption>
     <thead>
         <tr>
@@ -106,6 +95,10 @@
             <td align="center">52.9</td>
         </tr>
     </tbody>
-</table>
+</table-->
+<p style="padding: 15px; border-width: 10px; border-style: solid; text-align: center; position: absolute; top: 100px; left: 300px; text-indent: 20px; width: 200px; height: 200px; overflow: scroll;">
+    Lorem <span class="moveDown moveLeft">ipsum</span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Phasellus faucibus scelerisque eleifend donec. Leo in vitae turpis massa sed. Nunc faucibus a pellentesque sit amet porttitor. Feugiat in fermentum posuere urna nec. Amet commodo nulla facilisi nullam. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Faucibus turpis in eu mi bibendum. Purus viverra accumsan in nisl nisi scelerisque eu. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Nibh cras pulvinar mattis nunc sed blandit libero volutpat. Ac auctor augue mauris augue.
+Justo laoreet sit amet cursus sit. Purus viverra accumsan in nisl nisi scelerisque eu. Auctor augue mauris augue neque gravida in fermentum. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Quisque id diam vel quam elementum. Adipiscing at in tellus integer feugiat. Non quam lacus suspendisse faucibus interdum posuere lorem. Risus nullam eget felis eget nunc lobortis. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Blandit aliquam etiam erat velit scelerisque in dictum non. Tortor pretium viverra suspendisse potenti. Dapibus ultrices in iaculis nunc sed augue lacus viverra. Morbi tristique senectus et netus et. Nisl vel pretium lectus quam. Etiam erat velit scelerisque in. A iaculis at erat pellentesque adipiscing commodo elit. Gravida dictum fusce ut placerat. Quis eleifend quam adipiscing vitae proin sagittis. Dictumst vestibulum rhoncus est pellentesque. Viverra adipiscing at in tellus integer.
+</p>
 </body>
 </html>
