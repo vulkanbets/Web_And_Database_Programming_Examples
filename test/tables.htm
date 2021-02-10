@@ -1,83 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tables</title>
-        <!-- MIME Type Multipurpose Internet Mail Extensions -->
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-        <table>
-            <caption><strong>Temperature and Dew Point for SAN DIEGO INTERNATIONAL AIRPORT, CA US</strong></caption>
-            <thead>
-                <tr>
-                    <th rowspan="2">
-                        <div style="text-align: left;"><img src="noaa.png" alt="NOAA Logo" width="100"></div>
-                    </th>
-                    <th>
-                        <strong style="font-size: 18pt;">LATITUDE</strong>
-                    </th>
-                    <th>
-                        <strong style="font-size: 18pt;">LONGITUDE</strong>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <strong>32.7336</strong>
-                    </th>
-                    <th>
-                        <strong>-117.1831</strong>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <strong>DATE</strong>
-                    </td>
-                    <td>
-                        <strong>HLY-DEWP-NORMAL</strong>
-                    </td>
-                    <td>
-                        <strong>HLY-TEMP-NORMAL</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01-01-T01:00:00</td>
-                    <td>43.5</td>
-                    <td>52.9</td>
-                </tr>
-                <tr>
-                    <td>01-01-T01:00:00</td>
-                    <td>43.5</td>
-                    <td>52.9</td>
-                </tr>
-                <tr>
-                    <td>01-01-T01:00:00</td>
-                    <td>43.5</td>
-                    <td>52.9</td>
-                </tr>
-                <tr>
-                    <td>01-01-T01:00:00</td>
-                    <td>43.5</td>
-                    <td>52.9</td>
-                </tr>
-                <tr>
-                    <td>01-01-T01:00:00</td>
-                    <td>43.5</td>
-                    <td>52.9</td>
-                </tr>
-                <tr>
-                    <td>01-01-T01:00:00</td>
-                    <td>43.5</td>
-                    <td>52.9</td>
-                </tr>
-                <tr>
-                    <td>01-01-T01:00:00</td>
-                    <td>43.5</td>
-                    <td>52.9</td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Tables</title>
+<!-- MIME Type Multipurpose Internet Mail Extensions -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style type="text/css">
+    .header { background-color: cornflowerblue; }
+    .background
+    {
+        position: absolute;
+        top: 6px;
+        left: 15px;
+        z-index: 1;
+    }
+    .logo
+    {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 2;
+    }
+    .icon
+    {
+        position: absolute;
+        top: 225px;
+        left: 310px;
+        z-index: 3;
+    }
+    .dataTable
+    {
+        position: absolute;
+        top: 720px;
+    }
+</style>
+</head>
+<body>
+<table class="dataTable">
+    <img src="sdsu_librarydome_homepage_image_1440px.jpg" class="background" alt="SDSU Library"  border="0" align="left" width="1330">
+    <img src="SDSUprimary3Crgb.jpg" class="logo" alt="SDSU Logo"  border="0" align="left" width="300">
+    <img src="noaa.png" class="icon" alt="NOAA Logo" border="0" align="left" width="50">
+
+
+    <caption><strong>Temperature and Dew Point for SAN DIEGO INTERNATIONAL AIRPORT, CA US</strong></caption>
+    <thead>
+        <tr>
+            <th rowspan="2">
+                <div style="text-align: left;"><img src="noaa.png" alt="NOAA Logo" width="100"></div>
+            </th>
+            <th>
+                <strong style="font-size: 18pt;">LATITUDE</strong>
+            </th>
+            <th>
+                <strong style="font-size: 18pt;">LONGITUDE</strong>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <strong>32.7336</strong>
+            </th>
+            <th>
+                <strong>-117.1831</strong>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center" class="header"><strong>DATE</strong></td>
+            <td align="center"><strong>HLY-DEWP-NORMAL</strong></td>
+            <td align="center"><strong>HLY-TEMP-NORMAL</strong></td>
+        </tr>
+        <tr>
+            <td align="center">01-01-T01:00:00</td>
+            <td align="center">43.5</td>
+            <td align="center">52.9</td>
+        </tr>
+        <tr>
+            <td align="center">01-01-T01:00:00</td>
+            <td align="center">43.5</td>
+            <td align="center">52.9</td>
+        </tr>
+        <tr>
+            <td align="center">01-01-T01:00:00</td>
+            <td align="center">43.5</td>
+            <td align="center">52.9</td>
+        </tr>
+        <tr>
+            <td align="center">01-01-T01:00:00</td>
+            <td align="center">43.5</td>
+            <td align="center">52.9</td>
+        </tr>
+        <tr>
+            <td align="center">01-01-T01:00:00</td>
+            <td align="center">43.5</td>
+            <td align="center">52.9</td>
+        </tr>
+        <tr>
+            <td align="center">01-01-T01:00:00</td>
+            <td align="center">43.5</td>
+            <td align="center">52.9</td>
+        </tr>
+        <tr>
+            <td align="center">01-01-T01:00:00</td>
+            <td align="center">43.5</td>
+            <td align="center">52.9</td>
+        </tr>
+    </tbody>
+</table>
+</body>
 </html>
