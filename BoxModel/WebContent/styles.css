@@ -1,0 +1,17 @@
+.relbox
+{
+    width: 800px;
+    height: 600px;
+    border-width: 2px;
+    border-color: green;
+    border-style: solid;
+}
+.container
+{
+    border-radius: 10px;
+    margin: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+}
