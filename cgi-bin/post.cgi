@@ -5,7 +5,7 @@
     {
         foreach($array as $key => $value)
         {
-            echo "<h4>$key => $value</h4>";
+            echo "<h2>$key => $value</h2>";
         }
     }
 ?>
