@@ -6,15 +6,58 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body class="background">
+    <span class="pageTitle">LoRa IoT Device Configuration</span>
     <form name="" method="post" action="/cgi-bin/post.cgi">
         <div class="relbox">
-            <div class="container">
-                <p style="margin: 40px; padding: 20px; border-width: 2px; border-style: solid; border-color: red; display: inline-block;">
-                    <input type="text" name="textbox" value="default value" id="" maxlength="50">
+            <div class="containerLeft">
+                <h6 class="widgetTitle">Device Attributes</h6>
+                <p class="paragraph">
+                    <label class="widgetInputTitle">Device Name: </label>
+                    <input type="text" name="Device Name" value="sensor" id="" maxlength="50">
+                    <br><br>
+                    <label class="widgetInputTitle">Device EUI: </label>
+                    <input type="text" name="Device EUI" value="00-00-00-00-00-00-00-00" id="" maxlength="25">
+                    <br><br>
+                    <label class="widgetInputTitle">Class: </label>
+                    <select name="Class" id="">
+                        <optgroup label="">
+                            <option value="A" selected="selected">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </div>
+            <div class="containerRight">
+                <h6 class="widgetTitle">Forward Error Correction (FEC)</h6>
+                <p class="paragraph">
+                    <label class="widgetInputTitle">Coding Rate: </label>
+                    <select name="Coding Rate" id="">
+                        <optgroup label="">
+                            <option value="4/5" selected="selected">4/5</option>
+                            <option value="4/6">4/6</option>
+                            <option value="4/7">4/7</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </div>
+            <div class="containerRight">
+                <h6 class="widgetTitle">Power</h6>
+                <p class="paragraph">
+                </p>
+            </div>
+            <div class="containerBottom">
+                <h6 class="widgetTitle">LoRaWAN Network</h6>
+                <p class="paragraph">
+                </p>
+            </div>
+            <div class="containerBottom">
+                <h6 class="widgetTitle">Key Management</h6>
+                <p class="paragraph">
                 </p>
             </div>
         </div>
-        <input type="submit" value="submit">
+        <input type="submit" value="Save Changes">
         <input type="reset" value="clear">
     </form>
 </body>
