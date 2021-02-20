@@ -11,13 +11,13 @@
         <div class="relbox">
             <div class="containerLeft">
                 <h6 class="widgetTitle">Device Attributes</h6>
-                <p class="paragraph">
+                <p class="paragraph"  style="margin-bottom: 46px;">
                     <label class="widgetInputTitle">Device Name: </label>
                     <input type="text" name="Device Name" value="sensor" id="" maxlength="50">
-                    <br><br>
+                    <br><br><br>
                     <label class="widgetInputTitle">Device EUI: </label>
                     <input type="text" name="Device EUI" value="00-00-00-00-00-00-00-00" id="" maxlength="25">
-                    <br><br>
+                    <br><br><br>
                     <label class="widgetInputTitle">Class: </label>
                     <select name="Class" id="">
                         <optgroup label="">
@@ -32,8 +32,8 @@
                 <h6 class="widgetTitle">Forward Error Correction (FEC)</h6>
                 <p class="paragraph">
                     <label class="widgetInputTitle">Coding Rate: </label>
-                    <select name="Coding Rate" id="">
-                        <optgroup label="">
+                    <select name="Coding Rate">
+                        <optgroup>
                             <option value="4/5" selected="selected">4/5</option>
                             <option value="4/6">4/6</option>
                             <option value="4/7">4/7</option>
@@ -41,19 +41,53 @@
                     </select>
                 </p>
             </div>
-            <div class="containerRight">
+            <div class="containerRightBot">
                 <h6 class="widgetTitle">Power</h6>
                 <p class="paragraph">
+                    <label class="widgetInputTitle">Tx Power (dBm): </label>
+                    <br>
+                    <label class="widgetInputTitle">1<input type="range" name="Tx Power (dBm):" min="1" max="27" value="2">27</label>
                 </p>
             </div>
-            <div class="containerBottom">
+            <div class="containerBottom1">
                 <h6 class="widgetTitle">LoRaWAN Network</h6>
                 <p class="paragraph">
+                    <label class="widgetInputTitle">Frequency Band:</label>
+                    <select name="Frequency Band:" style="float: inline-end;">
+                        <optgroup>
+                            <option value="United States (902 to 928 MHz)" selected="selected">United States (902 to 928 MHz)</option>
+                            <option value="Europe (863 to 870 MHz)">Europe (863 to 870 MHz)</option>
+                            <option value="Asia (923 MHz)">Asia (923 MHz)</option>
+                            <option value="South Korea (920 to 923 MHz)">South Korea (920 to 923 MHz)</option>
+                            <option value="India (865 to 867 MHz)">India (865 to 867 MHz)</option>
+                        </optgroup>
+                    </select>
+                    <label class="widgetInputTitle">Sub-Band: 1<input type="range" name="Sub-Band:" min="1" max="8" value="2">8</label>
+                    <br>
+                    <br>
+                    <label class="widgetInputTitle">Datarate: </label>
+                    <select name="Datarate">
+                        <optgroup>
+                            <option value="SF10 BW125MHz" selected="selected">SF10 BW125MHz</option>
+                            <option value="SF9 BW125MHz">SF9 BW125MHz</option>
+                            <option value="SF8 BW125MHz">SF8 BW125MHz</option>
+                            <option value="SF7 BW125MHz">SF7 BW125MHz</option>
+                            <option value="SF8 BW500MHz">SF8 BW500MHz</option>
+                        </optgroup>
+                    </select>
                 </p>
             </div>
-            <div class="containerBottom">
+            <div class="containerBottom2">
                 <h6 class="widgetTitle">Key Management</h6>
                 <p class="paragraph">
+                    <label class="widgetInputTitle">AppKey(128 bits, 0x): </label>
+                    <input type="text" name="AppKey(128 bits, 0x):" value="01020304050607080910111213141516" id="" size="33" maxlength="33">
+                    <br><br><br>
+                    <label class="widgetInputTitle">AppSKey(128 bits, 0x): </label>
+                    <input type="text" name="AppSKey(128 bits, 0x):" value="01020304050607080910111213141516" id="" size="33" maxlength="33">
+                    <br><br><br>
+                    <label class="widgetInputTitle">NwkSKey(128 bits, 0x): </label>
+                    <input type="text" name="NwkSKey(128 bits, 0x):" value="01020304050607080910111213141516" id="" size="33" maxlength="33">
                 </p>
             </div>
         </div>

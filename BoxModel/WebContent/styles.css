@@ -1,10 +1,7 @@
 .relbox
 {
     width: 800px;
-    height: 600px;
-    border-width: 2px;
-    border-color: green;
-    border-style: solid;
+    height: 740px;
 }
 .containerLeft
 {
@@ -20,19 +17,42 @@
 {
     border-radius: 10px;
     margin: 8px;
-    padding-right: 90px;
+    padding-right: 95px;
     border-width: 2px;
     border-style: solid;
     border-color: rgb(229, 238, 238);
     position: relative;
     float: right;
 }
-.containerBottom
+.containerRightBot
 {
     border-radius: 10px;
     margin: 8px;
-    padding-right: 600px;
+    padding-right: 120px;
     border-width: 2px;
+    border-style: solid;
+    border-color: rgb(229, 238, 238);
+    position: relative;
+    float: right;
+}
+.containerBottom1
+{
+    border-radius: 10px;
+    margin: 8px;
+    padding-right: 33px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(229, 238, 238);
+    display: block;
+    position: relative;
+    float: left;
+}
+.containerBottom2
+{
+    border-radius: 10px;
+    margin: 8px;
+    border-width: 2px;
+    padding-right: 204px;
     border-style: solid;
     border-color: rgb(229, 238, 238);
     display: block;
@@ -59,7 +79,7 @@
 }
 .widgetInputTitle
 {
-    font-size: 1.4em;
+    font-size: 21px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
