@@ -8,43 +8,71 @@
     /* 
     *  Program to compute symbol time
     *  
-    *  
+    */
 
     var SF;  // [7....10]
     var BW;
     var Ts;  // symbol time, s, 2^SF/BW
 
-    SF = window.prompt("Enter Spreading Factor: ");
-    BW = window.prompt("Enter Bandwidth (MHz): ");
-
-    Ts = Math.pow(2, parseInt(SF)) / parseInt(BW);
-
-    document.writeln("<h1 class=\"nice\">" + "T<sub>s</sub> = 2<sup>SF</sup>/BW = " + Ts.toPrecision(2) + " s</h1>");
-
-    */
-
     /*
-    *   + addition
-    *   - subtraction
-    *   * multiplication
-    *   / division
-    *   % Modulus
-    */
+    SF = window.prompt("Enter Spreading Factor: ");
+    BW = window.prompt("Enter Bandwidth (125 or 500MHz): ");
 
-    var i = 1;
-    var j = 1;
-    var k = "" + (i + j);
-    document.writeln(k);
+    if( parseInt(BW) != 125 && parseInt(BW) != 500 )
+    {
+        document.writeln("<h1 class=\"nice error\">" + "error: bandwidth must be 125 or 500MHz" + "</h1>");
+    }
+    else
+    {
+        Ts = Math.pow(2, parseInt(SF)) / parseInt(BW);
+        document.writeln("<h1 class=\"nice\">" + "T<sub>s</sub> = 2<sup>SF</sup>/BW = " + Ts.toPrecision(2) + " s</h1>");
+    } */
 
+    
+    document.writeln("<table>");
+    document.writeln("<thead>");
+    document.writeln("<tr>");
+    document.writeln("<th>" + "SF");
+    document.writeln("</th>");
+    document.writeln("<th>" + "T<sub>s</sub>, s");
+    document.writeln("</th>");
+    document.writeln("</tr>");
+    document.writeln("</thead>");
+    document.writeln("<tbody>");
+    
 
-
+    
+    BW = 125;
+    for(var SF = 7; SF <= 12; SF++)
+    {
+        Ts = Math.pow(2, SF) / BW;
+        Ts = Math.pow(2, parseInt(SF)) / parseInt(BW);
+        document.writeln("<tr class=\"\">" + "<td>" + SF + "</td>"
+            + "<td>" + Ts.toPrecision(2) + "</td>"
+            + "</tr>");
+    }
+    document.writeln("</tbody>");
+    document.writeln("</table>");
 </script>
 <style type="text/css">
-    .nice
+
+    table
+    {
+        border-collapse: collapse;
+    }
+
+    table, tr, td
     {
         color: aqua;
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         font-family: sans-serif;
+        font-size: 1.5em;
+        border: 2px solid black;
+        padding: 5px;
+    }
+    .error
+    {
+        color: red;
     }
 </style>
 </head>
