@@ -5,6 +5,11 @@
 <title>Javascript Examples</title>
 <script type="text/javascript">
 
+    /* 
+    *  Program to compute symbol time
+    *  
+    *  
+
     var SF;  // [7....10]
     var BW;
     var Ts;  // symbol time, s, 2^SF/BW
@@ -12,7 +17,26 @@
     SF = window.prompt("Enter Spreading Factor: ");
     BW = window.prompt("Enter Bandwidth (MHz): ");
 
-    Ts = Math.pow(2, SF);
+    Ts = Math.pow(2, parseInt(SF)) / parseInt(BW);
+
+    document.writeln("<h1 class=\"nice\">" + "T<sub>s</sub> = 2<sup>SF</sup>/BW = " + Ts.toPrecision(2) + " s</h1>");
+
+    */
+
+    /*
+    *   + addition
+    *   - subtraction
+    *   * multiplication
+    *   / division
+    *   % Modulus
+    */
+
+    var i = 1;
+    var j = 1;
+    var k = "" + (i + j);
+    document.writeln(k);
+
+
 
 </script>
 <style type="text/css">
