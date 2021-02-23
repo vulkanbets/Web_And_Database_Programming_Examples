@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Javascript Examples</title>
+<script type="text/javascript">
+
+    var SF;  // [7....10]
+    var BW;
+    var Ts;  // symbol time, s, 2^SF/BW
+
+    SF = window.prompt("Enter Spreading Factor: ");
+    BW = window.prompt("Enter Bandwidth (MHz): ");
+
+    Ts = Math.pow(2, SF);
+
+</script>
+<style type="text/css">
+    .nice
+    {
+        color: aqua;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-family: sans-serif;
+    }
+</style>
+</head>
+<body>
+    
+</body>
+</html>
