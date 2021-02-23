@@ -3,11 +3,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Assignment 2</title>
+<script type="text/javascript">
+
+    // 00-0a-35-09-e3-51-e3-5f
+
+    // Regular Expressions
+    // 
+    var reEUI = /[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}-[0-9A-Fa-f]{2}/;
+
+    function validateForm()
+    {
+        if( reEUI.exec(document.forms["form"]["Device EUI"].value) ) return true;
+        else
+        {
+            alert("Device EUI must be specified as a hyphenated sequence of eight sequence of eight hexadecimal byte values");
+            return false;
+        }
+    }
+
+
+</script>
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body class="background">
     <span class="pageTitle">LoRa IoT Device Configuration</span>
-    <form name="" method="post" action="/cgi-bin/post.cgi">
+    <form name="form" method="post" action="/cgi-bin/post.cgi" onsubmit="return validateForm()">
         <div class="relbox">
             <div class="containerLeft">
                 <h6 class="widgetTitle">Device Attributes</h6>
@@ -16,7 +36,7 @@
                     <input type="text" name="Device Name" value="sensor" id="" maxlength="50">
                     <br><br><br>
                     <label class="widgetInputTitle">Device EUI: </label>
-                    <input type="text" name="Device EUI" value="00-00-00-00-00-00-00-00" id="" maxlength="25">
+                    <input type="text" name="Device EUI" value="00-00-00-00-00-00-00-00" id="" maxlength="23">
                     <br><br><br>
                     <label class="widgetInputTitle">Class: </label>
                     <select name="Class" id="">
