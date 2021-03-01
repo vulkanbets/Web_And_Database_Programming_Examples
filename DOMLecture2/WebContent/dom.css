@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+.highlight {background-color: yellow; }
+.red {background-color: red; }
+.green {background-color: green; }
+
+.container {
+	border-radius: 10px;
+	margin: 10px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: red;
+	display: inline-block;
+	cursor: pointer;
+}
