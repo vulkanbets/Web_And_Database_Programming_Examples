@@ -1,4 +1,21 @@
 
+
+
+
+// Specify a function to execute when the DOM is fully loaded.
+$(document).ready(ready);
+
+function ready()
+{
+    // Load data from the server using HTTP GET request
+    $.get("select.php", callback);
+}
+
+function callback(data)
+{
+    document.getElementById("textbox").defaultValue = data;
+}
+
 function verify()
 {
     var re = /^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/;
