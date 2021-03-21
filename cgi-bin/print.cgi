@@ -1,20 +1,20 @@
 #!"C:/Program Files/Ampps/php-7.3/php-cgi.exe" -q
 <?php
-    // // password: t80O8grSBeGXE3AH
+    // password: t80O8grSBeGXE3AH
 
-    // // $mysqli = new mysqli("localhost", "user", "password", "database");
-    // $mysqli = new mysqli("localhost", "apache", "t80O8grSBeGXE3AH", "compe561");
+    // $mysqli = new mysqli("localhost", "user", "password", "database");
+    $mysqli = new mysqli("localhost", "apache", "t80O8grSBeGXE3AH", "compe561");
 
-    // /* check connection */
-    // if( mysqli_connect_errno() )
-    // {
-    //     printf("Connection failed: %s<br>", mysqli_connect_error());
-    //     exit();
-    // }
-    // else
-    // {
-    //     printf("Connection Succeeded, host info: %s<br>", $mysqli->host_info);
-    // }
+    /* check connection */
+    if( mysqli_connect_errno() )
+    {
+        printf("Connection failed: %s<br>", mysqli_connect_error());
+        exit();
+    }
+    else
+    {
+        printf("Connection Succeeded, host info: %s<br>", $mysqli->host_info);
+    }
 
     // //  Structured Query Language (SQL)
     // //  INSERT INTO `ipaddress` (`address`) VALUES ('127.0.0.1');
@@ -31,8 +31,8 @@
 
    
 
-    // /* close connection */
-    // $mysqli->close();
+    /* close connection */
+    $mysqli->close();
 
     
     printArray($_POST);

@@ -11,6 +11,7 @@
     }
 
     // SELECT address, ts FROM `ipaddress` ORDER BY ts DESC LIMIT 1
+    
 
     $statement = 'SELECT address, ts FROM `ipaddress` ORDER BY ts DESC LIMIT 1';
 
