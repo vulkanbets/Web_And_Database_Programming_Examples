@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+.invalid
+{
+    color: red;
+}
+.valid
+{
+    color: green;
+}

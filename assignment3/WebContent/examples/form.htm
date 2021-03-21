@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Form to verify IP address</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="form.js"></script>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form name="form" method="post" action="/cgi-bin/post.cgi" onsubmit="return verify()">
+        <div class="" id="">
+        <label>Enter IPv4 address in dotted decimal notation: </label>
+        <input name="ipv4Address" type="text" size="15" value="127.0.0.1" maxlength="15" id="textbox">
+        <br>
+        <input type="submit" value="Check">
+        </div>
+        <div id="status">Status</div>
+    </form>
+</body>
+</html>
