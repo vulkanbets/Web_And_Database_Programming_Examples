@@ -1,4 +1,3 @@
-#!"C:/Program Files/Ampps/php-7.3/php-cgi.exe" -q
 <?php
     // password: t80O8grSBeGXE3AH
 

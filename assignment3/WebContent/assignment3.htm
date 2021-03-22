@@ -9,7 +9,7 @@
 </head>
 <body class="background">
     <span class="pageTitle">LoRa IoT Device Configuration</span>
-    <form name="form" method="post" action="/cgi-bin/print.cgi" onsubmit="return verify(this)">
+    <form name="form" method="post" action="submit.php" onsubmit="return verify(this)">
         <div class="relbox">
             <div class="containerLeft">
                 <h6 class="widgetTitle">Device Attributes</h6>
@@ -83,13 +83,13 @@
                 <h6 class="widgetTitle">Key Management</h6>
                 <p class="paragraph">
                     <label class="widgetInputTitle">AppKey(128 bits, 0x): </label>
-                    <input type="text" name="AppKey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
+                    <input type="text" name="appkey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
                     <br><br><br>
                     <label class="widgetInputTitle">AppSKey(128 bits, 0x): </label>
-                    <input type="text" name="AppSKey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
+                    <input type="text" name="appskey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
                     <br><br><br>
                     <label class="widgetInputTitle">NwkSKey(128 bits, 0x): </label>
-                    <input type="text" name="NwkSKey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
+                    <input type="text" name="nwkskey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
                 </p>
             </div>
         </div>
