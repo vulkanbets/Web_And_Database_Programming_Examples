@@ -52,9 +52,9 @@ function verify(form)
 
     if( !validateEUI() ) return false;
     if( !validateDeviceName(form) ) return false;
-    if( !validateKey(form.AppKey.value) ) return false;
-    if( !validateKey(form.AppSKey.value) ) return false;
-    if( !validateKey(form.NwkSKey.value) ) return false;
+    if( !validateKey(form.appkey.value) ) return false;
+    if( !validateKey(form.appskey.value) ) return false;
+    if( !validateKey(form.nwkskey.value) ) return false;
     return true;
 }
 // --------- Above code is just to verify Form Valiadation -----------
