@@ -1,20 +1,20 @@
 
-// // Specify a function to execute when the DOM is fully loaded.
-// $(document).ready(ready);
+// Specify a function to execute when the DOM is fully loaded.
+$(document).ready(ready);
 
-// function ready()
-// {
-//     // Load data from the server using HTTP GET request
-//     $.get("select.php", callback);
-// }
+function ready()
+{
+    // Load data from the server using HTTP GET request
+    $.get("select.php", callback);
+}
 
-// function callback(data)
-// {
-//     document.getElementById("textbox").defaultValue = data;
-// }
+function callback(data)
+{
+    // document.getElementById("codingrate").defaultValue = data;
+}
 
 
-// --------- This code is just to verify Form Valiadation -----------
+// --------- This code is just to verify the form input valiadation -----------
 function verify(form)
 {
     // 00-0a-35-09-e3-51-e3-5f
@@ -57,4 +57,4 @@ function verify(form)
     if( !validateKey(form.nwkskey.value) ) return false;
     return true;
 }
-// --------- Above code is just to verify Form Valiadation -----------
+// --------- Above code is just to verify the form input valiadation -----------

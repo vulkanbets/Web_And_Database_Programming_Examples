@@ -35,7 +35,7 @@
                 <p class="paragraph">
                     <label class="widgetInputTitle">Coding Rate: </label>
                     <select name="codingrate">
-                        <optgroup>
+                        <optgroup id="coding_rate">
                             <option value="5" selected="selected">4/5</option>
                             <option value="6">4/6</option>
                             <option value="7">4/7</option>
@@ -58,11 +58,11 @@
                     <label class="widgetInputTitle">Frequency Band:</label>
                     <select name="frequency" style="float: inline-end;">
                         <optgroup>
-                            <option value="US" selected="selected">United States (902 to 928 MHz)</option>
-                            <option value="EU">Europe (863 to 870 MHz)</option>
-                            <option value="AS">Asia (923 MHz)</option>
-                            <option value="KR">South Korea (920 to 923 MHz)</option>
-                            <option value="IN">India (865 to 867 MHz)</option>
+                            <option value="US" id="US" selected="selected">United States (902 to 928 MHz)</option>
+                            <option value="EU" id="EU">Europe (863 to 870 MHz)</option>
+                            <option value="AS" id="AS">Asia (923 MHz)</option>
+                            <option value="KR" id="KR">South Korea (920 to 923 MHz)</option>
+                            <option value="IN" id="IN">India (865 to 867 MHz)</option>
                         </optgroup>
                     </select>
                     <label class="widgetInputTitle">Sub-Band: 1<input type="range" name="subband" min="1" max="8" value="2">8</label>
@@ -71,11 +71,11 @@
                     <label class="widgetInputTitle">Datarate: </label>
                     <select name="datarate">
                         <optgroup>
-                            <option value="0" selected="selected">SF10 BW125MHz</option>
-                            <option value="1">SF9 BW125MHz</option>
-                            <option value="2">SF8 BW125MHz</option>
-                            <option value="3">SF7 BW125MHz</option>
-                            <option value="4">SF8 BW500MHz</option>
+                            <option value="0" id="0" selected="selected">SF10 BW125MHz</option>
+                            <option value="1" id="1">SF9 BW125MHz</option>
+                            <option value="2" id="2">SF8 BW125MHz</option>
+                            <option value="3" id="3">SF7 BW125MHz</option>
+                            <option value="4" id="4">SF8 BW500MHz</option>
                         </optgroup>
                     </select>
                 </p>
