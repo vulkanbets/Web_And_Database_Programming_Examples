@@ -71,6 +71,8 @@
     $statement12 = 'INSERT INTO `spreadingfactor` (`data_rate_id`, `spreading_factor`, `bandwidth`) VALUES (' . $_POST["datarate"] . ', ' . $string3 . ', \'' . $string4 . '\') ON DUPLICATE KEY UPDATE data_rate_id=' . $_POST["datarate"] . ', spreading_factor=' . $string3 . ', bandwidth=\'' . $string4 .'\'';
     echo "<h2>$statement12</h2>";
 
+    $statement13 = 'INSERT INTO `codingrate` (`code_rate_id`, `description`) VALUES (\'' . $_POST["codingrate"] . '\', \'' . $doc->getElementById($_POST["codingrate"])->nodeValue . '\') ON DUPLICATE KEY UPDATE code_rate_id=\'' . $_POST["codingrate"] . '\', description=\'' . $doc->getElementById($_POST["codingrate"])->nodeValue . '\'';
+    echo "<h2>$statement13</h2>";
 
     // if( $mysqli->query($statement) == false )
     // {
