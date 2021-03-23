@@ -10,6 +10,7 @@ function ready()
 
 function callback(data)
 {
+    console.log(data);
     // document.getElementById("codingrate").defaultValue = data;
 }
 
