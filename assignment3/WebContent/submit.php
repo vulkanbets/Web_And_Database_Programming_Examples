@@ -5,12 +5,12 @@
     /* check connection */
     if( mysqli_connect_errno() )
     {
-        printf("Connection failed: %s<br><br>", mysqli_connect_error());
+        printf("Connection failed: %s<br>", mysqli_connect_error());
         exit();
     }
     else
     {
-        printf("Connection Succeeded, host info: %s<br><br>", $mysqli->host_info);
+        printf("Connection Succeeded, host info: %s<br>", $mysqli->host_info);
     }
 
     libxml_use_internal_errors(true);       // Create DOM object to extract certain
@@ -18,7 +18,6 @@
     $doc->loadHTMLFile("assignment3.htm");  // this also clears any warnings
     libxml_clear_errors();                  // That are printed to the screen
     
-    echo $doc->getElementById($_POST["datarate"])->nodeValue;
 
     printArray($_POST);
     function printArray($array)
@@ -65,10 +64,12 @@
     $statement11 = 'INSERT INTO `frequencyband` (`region_code`, `description`) VALUES (\'' . $_POST["frequency"] . '\', \'' . $doc->getElementById($_POST["frequency"])->nodeValue . '\') ON DUPLICATE KEY UPDATE region_code=\'' . $_POST["frequency"] . '\', description=\'' . $doc->getElementById($_POST["frequency"])->nodeValue . '\'';
     echo "<h2>$statement11</h2>";
 
-    // INSERT INTO `spreadingfactor` (`data_rate_id`, `spreading_factor`, `bandwidth`) VALUES (3, 7, '125') ON DUPLICATE KEY UPDATE data_rate_id=3, spreading_factor=7, bandwidth='125'
-    // 
-    // $statement12 = 'INSERT INTO `spreadingfactor` (`data_rate_id`, `spreading_factor`, `bandwidth`) VALUES (\'' . $_POST["datarate"] . '\', \'' . $doc->getElementById($_POST["frequency"])->nodeValue . '\') ON DUPLICATE KEY UPDATE region_code=\'' . $_POST["frequency"] . '\', description=\'' . $doc->getElementById($_POST["frequency"])->nodeValue . '\'';
-    // echo "<h2>$statement12</h2>";
+    $string1 = $doc->getElementById($_POST["datarate"])->nodeValue;     // Get the string from html file by id
+    $string2 = explode(" ", $string1);                                  // parse it and sepearte it into the two
+    $string3 = substr($string2[0], 2);                                  // string parameters that I will send
+    $string4 = substr($string2[1], 2, 3);                               // as an sql statement
+    $statement12 = 'INSERT INTO `spreadingfactor` (`data_rate_id`, `spreading_factor`, `bandwidth`) VALUES (' . $_POST["datarate"] . ', ' . $string3 . ', \'' . $string4 . '\') ON DUPLICATE KEY UPDATE data_rate_id=' . $_POST["datarate"] . ', spreading_factor=' . $string3 . ', bandwidth=\'' . $string4 .'\'';
+    echo "<h2>$statement12</h2>";
 
 
     // if( $mysqli->query($statement) == false )
