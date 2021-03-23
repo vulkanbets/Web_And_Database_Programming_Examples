@@ -18,6 +18,7 @@
     else
     {
         $row = $result->fetch_object();
+        printf("%s", $row->device_name);
         printf("%s", $row->eui);
         
         /* free result set */
