@@ -39,7 +39,12 @@
     $statement8 = 'INSERT INTO `datarate` (`eui`, `data_rate_id`) VALUES (\'' . $_POST["eui"] . '\', ' . $_POST["datarate"] . ') ON DUPLICATE KEY UPDATE eui=\'' . $_POST["eui"] . '\', data_rate_id=' . $_POST["datarate"];
     $statement9 = 'INSERT INTO `coderate` (`eui`, `code_rate_id`) VALUES (\'' . $_POST["eui"] . '\', ' . $_POST["codingrate"] . ') ON DUPLICATE KEY UPDATE eui=\'' . $_POST["eui"] . '\', code_rate_id=' . $_POST["codingrate"];
     $statement10 = 'INSERT INTO `power` (`eui`, `tx_power`) VALUES (\'' . $_POST["eui"] . '\', ' . $_POST["txpower"] . ') ON DUPLICATE KEY UPDATE eui=\'' . $_POST["eui"] . '\', tx_power=' . $_POST["txpower"];
-    $statement11 = 'INSERT INTO `frequencyband` (`region_code`, `description`) VALUES (\'' . $_POST["frequency"] . '\', \'' . $doc->getElementById($_POST["frequency"])->nodeValue . '\') ON DUPLICATE KEY UPDATE region_code=\'' . $_POST["frequency"] . '\', description=\'' . $doc->getElementById($_POST["frequency"])->nodeValue . '\'';
+    // -----------------To set up for the frequency post query------------------------------------->
+    $seek = "SELECT `description` FROM `frequencyband` WHERE `region_code` = '" . $_POST["frequency"] . "'";
+    $answer = $mysqli->query($seek);
+    $row = $answer->fetch_array(MYSQLI_NUM);
+    $statement11 = 'INSERT INTO `frequencyband` (`region_code`, `description`) VALUES (\'' . $_POST["frequency"] . '\', \'' . $row[0] . '\') ON DUPLICATE KEY UPDATE region_code=\'' . $_POST["frequency"] . '\', description=\'' . $row[0] . '\'';
+    // -----------------To set up for the frequency post query------------------------------------>
     $string1 = $doc->getElementById($_POST["datarate"])->nodeValue;     // Get the string from html file by id
     $string2 = explode(" ", $string1);                                  // parse it and sepearte it into the two
     $string3 = substr($string2[0], 2);                                  // string parameters that I will send
