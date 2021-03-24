@@ -18,21 +18,21 @@
     else
     {
         $row = $result->fetch_object();
-        printf("%s", $row->device_name);
-        printf(" %s", $row->eui);
-        printf(" %s", $row->app_key);
-        printf(" %s", $row->app_s_key);
-        printf(" %s", $row->nwk_s_key);
-        printf(" %s", $row->class);
-        printf(" %s", $row->region_code);
-        printf(" %s", $row->description);
-        printf(" %s", $row->sub_band);
-        printf(" %s", $row->data_rate_id);
-        printf(" %s", $row->spreading_factor);
-        printf(" %s", $row->bandwidth);
-        printf(" %s", $row->code_rate_id);
-        printf(" %s", $row->description2);
-        printf(" %s", $row->tx_power);
+        printf("%s,", $row->device_name);
+        printf("%s,", $row->eui);
+        printf("%s,", $row->app_key);
+        printf("%s,", $row->app_s_key);
+        printf("%s,", $row->nwk_s_key);
+        printf("%s,", $row->class);
+        printf("%s,", $row->region_code);
+        printf("%s,", $row->description);
+        printf("%s,", $row->sub_band);
+        printf("%s,", $row->data_rate_id);
+        printf("%s,", $row->spreading_factor);
+        printf("%s,", $row->bandwidth);
+        printf("%s,", $row->code_rate_id);
+        printf("%s,", $row->description2);
+        printf("%s", $row->tx_power);
         
         /* free result set */
         $result->close();

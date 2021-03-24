@@ -34,7 +34,7 @@
                 <h6 class="widgetTitle">Forward Error Correction (FEC)</h6>
                 <p class="paragraph">
                     <label class="widgetInputTitle">Coding Rate: </label>
-                    <select name="codingrate">
+                    <select name="codingrate" id="codingrate">
                         <optgroup id="coding_rate">
                             <option value="5" id="5" selected="selected">4/5</option>
                             <option value="6" id="6">4/6</option>
@@ -49,7 +49,7 @@
                 <p class="paragraph">
                     <label class="widgetInputTitle">Tx Power (dBm): </label>
                     <br>
-                    <label class="widgetInputTitle">1<input type="range" name="txpower" min="1" max="27" value="2">27</label>
+                    <label class="widgetInputTitle">1<input type="range" name="txpower" id="txpower" min="1" max="27" value="2">27</label>
                 </p>
             </div>
             <div class="containerBottom1">
@@ -65,11 +65,11 @@
                             <option value="IN" id="IN">India (865 to 867 MHz)</option>
                         </optgroup>
                     </select>
-                    <label class="widgetInputTitle">Sub-Band: 1<input type="range" name="subband" min="1" max="8" value="2">8</label>
+                    <label class="widgetInputTitle">Sub-Band: 1<input type="range" name="subband" id="subband" min="1" max="8" value="2">8</label>
                     <br>
                     <br>
                     <label class="widgetInputTitle">Datarate: </label>
-                    <select name="datarate">
+                    <select name="datarate" id="datarate">
                         <optgroup>
                             <option value="0" id="0" selected="selected">SF10 BW125MHz</option>
                             <option value="1" id="1">SF9 BW125MHz</option>

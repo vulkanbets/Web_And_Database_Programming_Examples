@@ -10,8 +10,7 @@ function ready()
 
 function callback(data)
 {
-    var res = data.split(" ");
-    console.log(data);
+    var res = data.split(",");
     document.getElementById("devicename").defaultValue = res[0];
     document.getElementById("eui").defaultValue = res[1];
     document.getElementById("appkey").defaultValue = res[2];
@@ -23,8 +22,14 @@ function callback(data)
     var temp = res[6];
     var mySelect = document.getElementById('frequency');
     for(var i, j = 0; i = mySelect.options[j]; j++) { if(i.value == temp) { mySelect.selectedIndex = j; break; } }
-    
-
+    document.getElementById("subband").defaultValue = res[8];
+    var temp = res[9];
+    var mySelect = document.getElementById('datarate');
+    for(var i, j = 0; i = mySelect.options[j]; j++) { if(i.value == temp) { mySelect.selectedIndex = j; break; } }
+    var temp = res[12];
+    var mySelect = document.getElementById('codingrate');
+    for(var i, j = 0; i = mySelect.options[j]; j++) { if(i.value == temp) { mySelect.selectedIndex = j; break; } }
+    document.getElementById("txpower").value = res[14];
 }
 
 
