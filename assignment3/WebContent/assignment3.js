@@ -10,7 +10,22 @@ function ready()
 
 function callback(data)
 {
-    var res = data.split(",");
+    var res_split = data.split("::");
+    var res_left = res_split[0];
+    var optgroup = document.getElementById("frequencyband");
+    var res = res_left.split(",");
+
+    for(i = 0; i < res.length; i++)
+    {
+        var option = document.createElement("option");
+        var nameValue = res[i].split(":");
+        option.setAttribute("value", nameValue[0]);
+        option.setAttribute("id", nameValue[0]);
+        option.innerHTML = nameValue[1];
+        optgroup.appendChild(option);
+    }
+
+    var res = res_split[1].split(",");
     document.getElementById("devicename").defaultValue = res[0];
     document.getElementById("eui").defaultValue = res[1];
     document.getElementById("appkey").defaultValue = res[2];
