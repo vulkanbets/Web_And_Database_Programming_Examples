@@ -10,8 +10,21 @@ function ready()
 
 function callback(data)
 {
+    var res = data.split(" ");
     console.log(data);
-    // document.getElementById("codingrate").defaultValue = data;
+    document.getElementById("devicename").defaultValue = res[0];
+    document.getElementById("eui").defaultValue = res[1];
+    document.getElementById("appkey").defaultValue = res[2];
+    document.getElementById("appskey").defaultValue = res[3];
+    document.getElementById("nwkskey").defaultValue = res[4];
+    var temp = res[5];
+    var mySelect = document.getElementById('class');
+    for(var i, j = 0; i = mySelect.options[j]; j++) { if(i.value == temp) { mySelect.selectedIndex = j; break; } }
+    var temp = res[6];
+    var mySelect = document.getElementById('frequency');
+    for(var i, j = 0; i = mySelect.options[j]; j++) { if(i.value == temp) { mySelect.selectedIndex = j; break; } }
+    
+
 }
 
 

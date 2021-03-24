@@ -15,15 +15,15 @@
                 <h6 class="widgetTitle">Device Attributes</h6>
                 <p class="paragraph"  style="margin-bottom: 46px;">
                     <label class="widgetInputTitle">Device Name: </label>
-                    <input type="text" name="devicename" value="sensor" id="" maxlength="50">
+                    <input type="text" name="devicename" id="devicename" value="sensor" id="" maxlength="50">
                     <br><br><br>
                     <label class="widgetInputTitle">Device EUI: </label>
-                    <input type="text" name="eui" value="00-00-00-00-00-00-00-00" id="" maxlength="23">
+                    <input type="text" name="eui" value="00-00-00-00-00-00-00-00" id="eui" maxlength="23">
                     <br><br><br>
                     <label class="widgetInputTitle">Class: </label>
-                    <select name="class" id="">
+                    <select name="class" id="class">
                         <optgroup label="">
-                            <option value="A" selected="selected">A</option>
+                            <option value="A">A</option>
                             <option value="B">B</option>
                             <option value="C">C</option>
                         </optgroup>
@@ -56,7 +56,7 @@
                 <h6 class="widgetTitle">LoRaWAN Network</h6>
                 <p class="paragraph">
                     <label class="widgetInputTitle">Frequency Band:</label>
-                    <select name="frequency" style="float: inline-end;">
+                    <select name="frequency" id="frequency" style="float: inline-end;">
                         <optgroup>
                             <option value="US" id="US" selected="selected">United States (902 to 928 MHz)</option>
                             <option value="EU" id="EU">Europe (863 to 870 MHz)</option>
@@ -84,13 +84,13 @@
                 <h6 class="widgetTitle">Key Management</h6>
                 <p class="paragraph">
                     <label class="widgetInputTitle">AppKey(128 bits, 0x): </label>
-                    <input type="text" name="appkey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
+                    <input type="text" name="appkey" value="01020304050607080910111213141516" id="appkey" size="32" maxlength="32">
                     <br><br><br>
                     <label class="widgetInputTitle">AppSKey(128 bits, 0x): </label>
-                    <input type="text" name="appskey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
+                    <input type="text" name="appskey" value="01020304050607080910111213141516" id="appskey" size="32" maxlength="32">
                     <br><br><br>
                     <label class="widgetInputTitle">NwkSKey(128 bits, 0x): </label>
-                    <input type="text" name="nwkskey" value="01020304050607080910111213141516" id="" size="32" maxlength="32">
+                    <input type="text" name="nwkskey" value="01020304050607080910111213141516" id="nwkskey" size="32" maxlength="32">
                 </p>
             </div>
         </div>
